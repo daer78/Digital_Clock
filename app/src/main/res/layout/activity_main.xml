@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnMirror"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:text="HUD"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:background="#333333" />
+
+    <Button
+        android:id="@+id/btnEditStages"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="#333333"
+        android:padding="10dp"
+        android:text="Редактировать\nэтапы"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <!-- Кнопки изменения яркости -->
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:background="#222222"
+        android:padding="5dp"
+        android:elevation="10dp">
+
+        <Button
+            android:id="@+id/btnBrightnessIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:text="☀+"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="#444444" />
+
+        <Button
+            android:id="@+id/btnBrightnessDecrease"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:text="☀-"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="#444444" />
+
+    </LinearLayout>
+
+    <!-- Кнопки изменения размера шрифта -->
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:background="#222222"
+        android:padding="5dp"
+        android:elevation="10dp">
+
+        <Button
+            android:id="@+id/btnFontIncrease"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:text="A+"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="#444444" />
+
+        <Button
+            android:id="@+id/btnFontDecrease"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:text="A-"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="#444444" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <!-- Текущее время: отдельные TextView для каждого символа -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/tvHour1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvHour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvColon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvMin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvMin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvColon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvSec1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+            <TextView android:id="@+id/tvSec2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#00FF00"
+                android:textSize="150sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-50dp"
+                android:lineSpacingMultiplier="0.1" />
+
+        </LinearLayout>
+
+        <!-- Разность времени (теперь 2-е место, размер 100sp) -->
+        <TextView
+            android:id="@+id/tvTimeDiff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp"
+            android:text="--:--"
+            android:textColor="#FFFFFF"
+            android:textSize="100sp"
+            android:fontFamily="monospace"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="-30dp"
+            android:lineSpacingMultiplier="0.1" />
+
+        <!-- Примечание к этапу -->
+        <TextView
+            android:id="@+id/tvStageNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textColor="#FFCC00"
+            android:textSize="48sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.5" />
+
+        <!-- Время этапа (теперь 4-е место, размер 80sp) -->
+        <TextView
+            android:id="@+id/tvStageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-15dp"
+            android:text="--:--:--"
+            android:textColor="#FFFFFF"
+            android:textSize="80sp"
+            android:fontFamily="monospace"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="-20dp"
+            android:lineSpacingMultiplier="0.1" />
+
+    </LinearLayout>
+
+    <!-- Секундомер 1 (левый нижний угол) -->
+    <TextView
+        android:id="@+id/tvStopwatch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="00:00"
+        android:textColor="#00FFFF"
+        android:textSize="70sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="0.5"
+        android:background="#222222"
+        android:padding="10dp" />
+
+    <!-- Секундомер 2 (правый нижний угол) -->
+    <TextView
+        android:id="@+id/tvStopwatch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="00:00"
+        android:textColor="#FF00FF"
+        android:textSize="70sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="0.5"
+        android:background="#222222"
+        android:padding="10dp" />
+
+</RelativeLayout>
